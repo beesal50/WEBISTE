@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+
+    <!-- ================  Big Screen Navbar =============== -->
+        <nav>
+            <ul class="left">
+                <li><a href="/index.html"><img src="/images/magenest-logo-2022.webp" class="logo"></a></li>
+                <li><a href="/project/project.html">Project</a></li>
+                <li><a href="#">Solution</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="/document/document.html">Document</a></li>
+                <li><a href="#">Introduce</a></li>
+                <li><a href="/recuritment/recuritment.html">Recruit</a></li>
+            </ul>
+            <div class="right">
+                <div class="div">
+                    <a href="#" class="btn">Contact</a>
+                </div>
+                <div class="div">
+                    <select name="" id="">
+                        <option class="language" value="">English</option>
+                        <option value="">Nepali</option>
+                    </select>
+                </div>               
+            </div>
+        </nav>
+
+
+    <!-- ================  Small Screen Navbar =============== -->
+        <nav class="mobile-navbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/images/magenest-logo-2022.webp"></a>
+            </div>
+            <div class="menu-icon">
+                <img src="/images/menu-icon.png" alt="" srcset="">
+            </div>
+            
+            
+        </nav>
+
+    <!-- ================ MOBILE MENU CONTAINER =============== -->
+            <div class="mobile-menu-container">
+                <div class="close-icon">
+                    <img src="/images/close-icon.svg" alt="">
+                </div>
+                <ul>
+                    <li><a href="/project/project.html">Project</a></li>
+                    <li><a href="#">Solution</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="/document/document.html">Document</a></li>
+                    <li><a href="/recuritment/recuritment.html">Recruit</a></li>
+                    <li><a href="/contact/contact.html" class="current">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="hero">
+                <h1>Contact</h1>
+                <p>Our team is always ready to answer any request of your business as soon as we receive the information.</p>
+            </div>
+    </header>
+
+    <!-- =============== CONTACT SECTION =================== -->
+    <section>
+        <div class="contactBox">
+                <form action="">
+                    <div class="box">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name">
+                    </div>
+
+                    <div class="box">
+                        <label for="position">Position:</label>
+                        <select id="position">
+                            <option value="">Business Owner</option>
+                            <option value="">Digital Agency</option>
+                            <option value="">Partner</option>
+                            <option value="">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="box">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="box">
+                        <label for="phone">Phone Number *</label>
+                        <input type="number" id="phone" required>
+                    </div>
+
+                    <div class="box">
+                        <label for="company">Company *</label>
+                        <input type="text" id="company">
+                    </div>
+
+                    <div class="box">
+                        <label for="website">Website</label>
+                        <input type="text" placeholder="https://" id="website">
+                    </div>
+                
+                    <div class="box">
+                        <label for="services">Service:</label>
+                        <select id="services">
+                            <option value="">eCommerce</option>
+                            <option value="">ERP/CRP</option>
+                            <option value="">Cloud Hosting</option>
+                            <option value="">Mobile App</option>
+                            <option value="">Other</option>
+                        </select>
+                    </div>
+    
+                    <div class="textArea">
+                        <label for="message">Message *</label>
+                        <textarea id="message" cols="60" rows="5"></textarea>
+                    </div>
+                    <input class="btn" type="submit" value="Send">
+                </form>
+        </div>
+    </section>
+
+
+    <!-- ================= MESSAGE SECTION ==================== -->  
+    <div class="mmsgBox">
+        <div class="message">
+            <div class="left">
+                <h4>Subscribe to our newsletter so you don't miss
+                    any useful information!</h4>
+            </div>
+            <div class="right">
+                <div class="form">
+                    <input type="email" name="" placeholder="Enter your email address..." required>
+                    <div class="arrow">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <p> <span class="note">Note: </span>By providing us with contact information, you agree to receive news and promotional offers from Magenest.</p>
+            </div>
+        </div>
+    </div>  
+
+
+
+    <!-- ============ FOOTER SECTION ================== -->
+    <footer>
+        <div class="inside">
+            <div class="first">
+                <div class="footer-logo">
+                    <img src="/images/mgn-logo-gray.webp">
+                </div>
+                <div class="link">
+                    <h3>Follow us</h3>
+                    <div class="link-item">
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100070968464624">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="same">
+                <h3>Solution</h3>
+                <p>Magento</p>
+                <p>HubSpot</p>
+                <p>Odoo</p>
+                <p>Ama</p>
+            </div>
+            <div class="same">
+                <h3>Company</h3>
+                <p>Introduce</p>
+                <p>Contact</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © 2022, Magenest JSC. All rights reserved.</p>
+        </div>
+
+    </footer>
+    <script src="contact.js"></script>
+
+    
+</body>
+</html>

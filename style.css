@@ -1,0 +1,894 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Open+Sans:wght@500;700&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    background-color: orangered;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 400ms ease;
+    border: 2px solid orangered;
+}
+.btn:hover{
+    text-decoration: none;
+    background-color: rgb(19, 19, 62);
+}
+
+header{
+    width: 100%;
+    background-color: rgb(83, 83, 84);
+}
+
+/* ==================== Big Screen Navbar ==================== */
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(45deg,rgb(15, 15, 43),rgb(14, 24, 52));
+    box-shadow: 12px 0px 12px rgb(15, 15, 43);
+    z-index: 1;
+}
+nav .left{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+nav .right{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+nav .right select{
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    color: rgb(184, 182, 179);
+    cursor: pointer;
+    background: transparent;
+}
+nav .right select option{
+    color: black;
+}
+nav li{
+    list-style: none;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 400ms ease;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+nav .language{
+    font-weight: 200;
+    color: rgb(184, 182, 179);
+    font-family: sans-serif;
+}
+nav .language:hover{
+    text-decoration: none;
+}
+
+/* ==================== Small Screen Navbar ==================== */
+.mobile-navbar{
+    display: none;
+    position: fixed;
+    width: 100%;
+}
+
+
+.menu-icon img{
+    width: 30px;
+}
+.menu-icon{
+    cursor: pointer;
+    border-radius: 2px;
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    background-color: white;
+}
+
+/* ==================== Mobile Menu Container ==================== */
+.mobile-menu-container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 100%;
+    align-items: center;
+    transition: all 400ms ease;
+    z-index: 3;
+}
+.mobile-menu-container .close-icon{
+    position: fixed;
+    top: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    right: 2rem;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+.mobile-menu-container.active {
+    left: 0;
+}
+.mobile-menu-container.active .close-icon{
+    opacity: 1;
+    pointer-events: auto;
+}
+.mobile-menu-container ul{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+.mobile-menu-container a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    transition: all 400ms ease;
+    font-size: 1.4rem;
+    padding: 1.5rem 0;
+    display: block;
+}
+.mobile-menu-container a:hover{
+    background-color: rgb(22, 23, 23);
+}
+
+/* =============== HERO SECTION ============== */
+.hero{
+    padding: 0 2.5rem;
+    background-image: url(images/background.webp);
+    background-size: cover;
+    background-position: center;
+}
+.hero .content h3{
+    /* margin-top: 5.6rem; */
+    padding-top: 12rem;
+    width: 35%;
+    color: white;
+}
+.hero .auto-text{
+    font-size: 40px;
+    margin-top: 0.7rem;
+    width: 550px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.hero .content p{
+    margin-top: 1rem;
+    width: 405px;
+    color: rgb(211, 206, 206);
+    font-size: 18px;
+    line-height: 28px;
+}
+.hero .design{
+    display: flex;
+    margin-top: 3rem;
+    gap: 1rem;
+    padding-bottom: 5rem;
+} 
+.hero .design h3{
+    color: #FFE044;
+}
+.hero .design .line{
+    width: 40px;
+    height: 4px;
+    margin-top: 5px;
+    background-color: #FFE044;
+}
+.companies{
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+.companies .img{
+    width: 100%;
+}
+
+
+/* =============== 2nd Row SECTION ============== */
+section{
+    width: 93%;
+    margin: 4rem auto;
+}
+.secondrow{
+    display: flex;
+    width: 100%;
+    padding-top: 2rem;
+}
+.secondrow .left{
+    width: 50%;
+}
+.secondrow .left h3{
+    margin-bottom: 1rem;
+    font-weight: 600;
+    width: 260px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #979797;
+}
+.secondrow .left h2{
+    width: 510px;
+    margin-bottom: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 35px;
+    color: #262121;
+}
+.secondrow .left p{
+    width: 382px;
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 30px;
+    color: #262121;
+}
+.secondrow .left .btn{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    font-family: sans-serif;
+    transition: all 300;
+}
+.secondrow .btn:hover{
+    background-color: white;
+    color: orangered;
+}
+.secondrow .right{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+.secondrow .right img{
+    width: 92%;
+}
+.secondrow img{
+    width: 100%;
+}
+
+
+/* =============== SOLUTION CONTAINER ============== */
+.solutionContainer{
+    margin-top: 5rem;
+}
+.solutionContainer h5{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(135, 133, 130);
+    margin: auto;
+    font-size: 20px;
+}
+.solutionContainer h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 35px;
+    margin-top: 1.5rem;
+}
+.box h4{
+    text-transform: uppercase;
+    color: white;
+}
+.allBox{
+    width: 92%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-position: center;
+    background-size: cover;
+}
+.box{
+    width: 100%;
+    margin: auto;
+    height: 40vh;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.box .text{
+    width: 100%;
+    padding: 0.8rem;
+    line-height: 24px;
+
+}
+.box .image{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box img{
+    z-index: 0;
+    width: fit-content;
+}
+
+
+
+/* =============== REVIEW SECTION ============== */
+.reviewBox{
+    width: 92%;
+    margin: 4rem auto 2rem auto;
+    text-align: center;
+    background: linear-gradient(45deg,#25435f,rgb(31, 48, 93));
+    position: relative;
+    color: white;
+}
+.reviewTitle{
+    padding-top: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    color: #FFE044;
+}
+.reviewImg{
+    border-radius: 50%;
+    margin: 3rem auto;
+    object-fit: cover;
+}
+.reviewWork{
+    margin-top: 5px;
+    color: #FFE044;
+}
+.reviewPara{
+    margin: 2rem auto 4rem auto;
+    width: 70%;
+    position: relative;
+    height: 10vh;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgb(248, 246, 246);
+}
+.reviewBox .leftarrow, .reviewBox .rightarrow{
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+.reviewBox .controls{
+    padding-bottom: 3rem;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+
+/*==================== BLOG AND MATERIAL SECTON ====================*/
+.title{
+    width: 92%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0 2rem 0;
+}
+.title .blog h2{
+    text-transform: uppercase;
+    font-size: 32px;
+    font-family: "Inter", Sans-serif;
+    font-weight: 500;
+}
+.title .readMore{
+    width: max-content;
+    display: flex;
+    align-items: flex-end;
+}
+.title .readMore a{
+    color: orangered;
+    font-family: "Inter", Sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.blogContent .date{
+    color: rgb(77, 76, 73);
+    font-family: "Inter", Sans-serif;
+    font-size: 14px;
+    font-weight: 700;;
+}
+.blogBox{
+    width: 92%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.blogContent .box{
+    height: 35vh;
+    margin-bottom: 1rem;
+}
+
+.blogContent .box img{
+    width: 100%;
+    height: 100%;
+}
+.blogContent p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Inter", Sans-serif;
+}
+.blogContent a{
+    color: orangered;
+}
+.material{
+    margin-bottom: 8rem;
+}
+
+
+
+/*==================== MESSAGE SECTON ====================*/
+.message{
+    width: 92%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.mmsgBox{
+    background-color: #E5E5E5;
+}
+.message .left{
+    padding: 3rem 0;
+    width: 50%;
+}
+.message .left h4{
+    width: 362px;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: "Inter", Sans-serif;
+    color: #030303;
+}
+.message .right{
+    width: 45%;
+    padding: 1rem 0;
+}
+.message .right .form input{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+.message .form input[type="email"]{
+    font-size: 16px;
+    border-color: #E5E5E5;
+    background-color: #E5E5E5;
+}
+
+.message .right .form{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.message .right .arrow{
+    cursor: pointer;
+    width: max-content;
+    color: rgb(112, 113, 113);
+}
+.message .right .note{
+    color: black;
+    font-weight: 700;
+}
+.message .right p{
+    color: rgb(59, 62, 62);
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 1rem;
+}
+
+/*================== FOOTER SECTION ======================*/
+footer{
+    width: 100%;
+    background-color: #2A2D2E;
+    color: #979797;
+}
+footer .inside{
+    display: flex;
+    width: 92%;
+    margin: auto;
+    padding: 3rem 0;
+    justify-content: space-between;
+}
+footer .first{
+    display: flex;
+    flex-direction: column;
+    width: 120%;
+}
+footer .same{
+    width: 80%;
+}
+footer .link h3{
+    color: #FFFFFF;
+    margin-top: 1.7rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+footer .first .link .link-item{
+    display: flex;
+    margin-top: 0.8rem;
+    font-size: 25px;
+    gap: 2rem;
+}
+footer .link-item a{
+    text-decoration: none;
+    color: #FFFFFF;
+
+}
+footer .same h3{
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+footer .same p{
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+footer .same p:hover{
+    color: orangered;
+}
+footer .copyright{
+    color: #928A8A;
+    background-color: #191A1B;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+
+
+
+/* =============== MEDIA QUERY ============== */
+
+@media (max-width:1300px){
+    nav .left{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+    nav .right{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+@media (max-width:1145px){
+    nav .left li{
+        width: 80%;
+    }
+    nav .left{
+        gap: 1rem;
+    }
+    nav .right{
+        gap: 0.5rem;
+    }
+}
+@media (max-width:1024px){
+    .mobile-navbar{
+        display: flex;
+    }
+    nav{
+        display: none;
+        padding: 1rem 2rem;
+    }
+    .mobile-navbar .logo img{
+        width: 150px;
+    }
+    hr{
+        display: none;
+    }
+    .companies{
+        display: none;
+    }
+    .hero .content p{
+        width: 55%;
+    }
+    .hero .content h3{
+        width: 100%;
+    }
+    .hero .auto-text{
+        width: 400px;
+        height: 100px;
+    }
+    .secondrow{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .secondrow .left{
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .secondrow .right{
+        width: 100%;
+        background-color: aqua;
+    }
+    .secondrow .right img{
+        width: 100%;
+    }
+    .reviewBox .controls{
+        margin-top: 7.5rem;
+    }
+    .reviewPara{
+        line-height: 28px;
+        width: 100%;
+    }
+    .message .left h4{
+        font-size: 16px;
+        width: fit-content;
+    }
+    .blogContent .box{
+        height: 30vh;
+        margin-bottom: 1rem;
+    }
+    .reviewPara{
+        margin: 2rem auto 3rem auto;
+        width: 70%;
+        position: relative;
+        font-size: 20px;
+        line-height: 30px;
+        color: rgb(248, 246, 246);
+    }
+}
+@media (max-width:800px){
+    .allBox{
+        display: flex;
+        flex-direction: column;
+    }
+    .allBox .box{
+        display: grid;
+        grid-template-columns: auto auto;
+        height: 15vh;
+    }
+    .allBox .box .image{
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+        align-items: center;
+    }
+    .allBox .box img{
+        max-width: 80px;
+        width: 50px;
+        z-index: 0;
+        height: fit-content;
+    }
+    .solutionContainer h1{
+        width: 80%;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: auto;
+        font-size: 23px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        line-height: 35px;
+        padding-top: 1.5rem;
+    }
+
+    .message{
+        flex-direction: column;
+    }
+    .message .left,.message .right{
+        width: 100%;
+    }
+    .message .left{
+        padding: 2rem 0;
+    }
+    .message .left h4{
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    .reviewPara{
+        margin: 2rem auto 0rem auto;
+        width: 90%;
+        position: relative;
+        height: 10vh;
+        font-size: 20px;
+        line-height: 30px;
+        color: rgb(248, 246, 246);
+    }
+    .mmsgBox .right{
+        padding-bottom: 2rem;
+    }
+
+    footer .inside{
+        display: flex;
+        width: 92%;
+        margin: auto;
+        padding: 3rem 0 8rem 0;
+        flex-direction: column;
+        position: relative;
+    }
+    footer .inside .link{
+        position: absolute;
+        bottom: 30px;
+    }
+    footer .first{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    footer .same{
+        width: 100%;
+    }
+    footer .same h3{
+        color: #FFFFFF;
+        font-size: 16px;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .material{
+        margin-bottom: 5rem;
+    }
+    .message .right{
+        width: 100%;
+    }
+    .blogBox{
+        width: 92%;
+        margin: auto;
+        grid-template-columns: 100%;
+    }
+    .blogContent .box{
+        height: 55vh;
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width:535px){
+    .secondrow .left p{
+        width: 100%;
+        font-size: 17px;
+        line-height: 22px;
+        margin-bottom: 30px;
+        color: #262121;
+    }
+    .secondrow .left{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+    .secondrow .left .btn{
+        width: 70%;
+        padding: 8px 10px;
+        margin: auto;
+        font-weight: 300;
+    }
+    .hero .content h3{
+        padding-top: 6rem;
+        width: 35%;
+        font-size: 16px;
+        color: white;
+    }
+    .hero .auto-text{
+        font-size: 30px;
+        margin-top: 1.3rem;
+        width: 100%;
+        color: white;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .hero .content p{
+        width: 100%;
+        color: rgb(211, 206, 206);
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .secondrow .left h2{
+        width: 100%;
+        font-size: 17px;
+        line-height: 25px;
+    }
+    .secondrow .left h3{
+        width: 100%;
+    }
+    .hero .design .line{
+        display: none;
+    }
+    .hero .design{
+        padding-bottom: 3rem;
+    } 
+    section{
+        width: 93%;
+        margin: 1rem auto;
+    }
+    .menu-icon{
+        cursor: pointer;
+        border-radius: 2px;
+        display: flex;
+        padding: 4px;
+        align-items: center;
+        background-color: white;
+    }
+    .menu-icon img{
+        width: 22px;
+    }
+    .blogContent .box{
+        /* background-color: red; */
+        width: 100%;
+        height: 35vh;
+        margin-bottom: 1rem;
+    }
+    .blogContent .box img{
+        width: 100%;
+        height: 100%;
+    }
+    .reviewPara{
+        margin: 2rem auto 0rem auto;
+        width: 90%;
+        position: relative;
+        height: 15vh;
+        font-size: 20px;
+        line-height: 30px;
+        color: rgb(248, 246, 246);
+    }
+    .mmsgBox .right{
+        padding-bottom: 2rem;
+    }
+    .message .right .form input{
+        width: 100%;
+        border: none;
+        outline: none;
+    }
+    footer .inside{
+        display: flex;
+        width: 92%;
+        margin: auto;
+        padding: 3rem 0 8rem 0;
+        flex-direction: column;
+        position: relative;
+    }
+    footer .inside .link{
+        position: absolute;
+        bottom: 30px;
+    }
+    footer .first{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    footer .same{
+        width: 100%;
+    }
+    footer .same h3{
+        color: #FFFFFF;
+        font-size: 16px;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}

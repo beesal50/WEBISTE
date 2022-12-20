@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Open+Sans:wght@500;700&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    background-color: rgb(83, 83, 84);
+}
+.active{
+    text-decoration: underline;
+}
+.btn{
+    background-color: orangered;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 400ms ease;
+    border: 2px solid orangered;
+    cursor: pointer;
+}
+.btn:hover{
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: black;
+}
+/* ==================== Big Screen Navbar ==================== */
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(45deg,rgb(15, 15, 43),rgb(14, 24, 52));
+    box-shadow: 12px 0px 12px rgb(15, 15, 43);
+    z-index: 1;
+}
+nav .left{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+nav .right{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+nav .right select{
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: rgb(184, 182, 179);
+    cursor: pointer;
+    background: transparent;
+    text-transform: uppercase;
+}
+nav .right select option{
+    color: black;
+}
+nav li{
+    list-style: none;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 400ms ease;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+nav .language{
+    font-weight: 200;
+    color: rgb(184, 182, 179);
+    font-family: sans-serif;
+}
+nav .language:hover{
+    text-decoration: none;
+}
+
+/* ==================== Small Screen Navbar ==================== */
+.mobile-navbar{
+    display: none;
+    position: fixed;
+    width: 100%;
+}
+
+
+.menu-icon img{
+    width: 30px;
+}
+.menu-icon{
+    cursor: pointer;
+    border-radius: 2px;
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    background-color: white;
+}
+
+/* ==================== Mobile Menu Container ==================== */
+.mobile-menu-container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 100%;
+    align-items: center;
+    transition: all 400ms ease;
+    z-index: 3;
+    text-decoration: none;
+}
+.mobile-menu-container .close-icon{
+    position: fixed;
+    top: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    right: 2rem;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+.mobile-menu-container.active {
+    left: 0;
+}
+.mobile-menu-container.active .close-icon{
+    opacity: 1;
+    pointer-events: auto;
+}
+.mobile-menu-container .current{
+    background-color: rgb(22, 23, 23);
+}
+.mobile-menu-container ul{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+.mobile-menu-container a{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    transition: all 400ms ease;
+    font-size: 1.4rem;
+    padding: 1.5rem 0;
+    display: block;
+    text-decoration: none;
+}
+.mobile-menu-container a:hover{
+    background-color: rgb(22, 23, 23);
+}
+/*=========== HERO SECTION =============*/
+.hero{background-image: url(/images/contact/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+}
+.hero h1{
+    padding: 13rem 0 0 3rem;
+    color: rgb(246, 240, 240);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.hero p{
+    width: 35%;
+    margin: left;
+    line-height: 22px;
+    font-size: 14px;
+    color: #bfc2c4;
+    font-family: "Inter", Sans-serif;
+    margin-top: 2rem;
+    padding-left: 3rem;
+}
+
+/*=========== CONTACT US =============*/
+section{
+    width: 100%;
+    margin: 3rem 0;
+}
+.contactBox{
+    width: 92%;
+    margin: auto;
+}
+.contactBox .box{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.contactBox form{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1.8rem;
+    position: relative;
+    padding-bottom: 14rem;
+}
+.contactBox form input,select,textarea{
+    margin-top: 8px;
+    padding: 10px;
+    font-size: 15px;
+}
+form .textArea{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 3.8rem;
+    left: 0;
+    width: 100%;
+}
+form .btn{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+}
+form label{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Inter", Sans-serif;
+}
+
+
+/*==================== MESSAGE SECTON ====================*/
+.message{
+    width: 92%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.mmsgBox{
+    background-color: #E5E5E5;
+}
+.message .left{
+    padding: 3rem 0;
+    width: 50%;
+}
+.message .left h4{
+    width: 362px;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: "Inter", Sans-serif;
+    color: #030303;
+}
+.message .right{
+    width: 45%;
+    padding: 1rem 0;
+}
+.message .right .form input{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+.message .form input[type="email"]{
+    font-size: 16px;
+    border-color: #E5E5E5;
+    background-color: #E5E5E5;
+}
+
+.message .right .form{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.message .right .arrow{
+    cursor: pointer;
+    width: max-content;
+    color: rgb(112, 113, 113);
+}
+.message .right .note{
+    color: black;
+    font-weight: 700;
+}
+.message .right p{
+    color: rgb(59, 62, 62);
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 1rem;
+}
+
+/*================== FOOTER SECTION ======================*/
+footer{
+    width: 100%;
+    background-color: #2A2D2E;
+    color: #979797;
+}
+footer .inside{
+    display: flex;
+    width: 92%;
+    margin: auto;
+    padding: 3rem 0;
+    justify-content: space-between;
+}
+footer .first{
+    display: flex;
+    flex-direction: column;
+    width: 120%;
+}
+footer .same{
+    width: 80%;
+}
+footer .link h3{
+    color: #FFFFFF;
+    margin-top: 1.7rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+footer .first .link .link-item{
+    display: flex;
+    margin-top: 0.8rem;
+    font-size: 25px;
+    gap: 2rem;
+}
+footer .link-item a{
+    text-decoration: none;
+    color: #FFFFFF;
+
+}
+footer .same h3{
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+footer .same p{
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+footer .same p:hover{
+    color: orangered;
+}
+footer .copyright{
+    color: #928A8A;
+    background-color: #191A1B;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+
+/* =============== MEDIA QUERY ============== */
+
+@media (max-width:1300px){
+    nav .left{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+    nav .right{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+@media (max-width:1145px){
+    nav .left li{
+        width: 80%;
+    }
+    nav .left{
+        gap: 1rem;
+    }
+    nav .right{
+        gap: 0.5rem;
+    }
+}
+@media (max-width:1024px){
+    .mobile-navbar{
+        display: flex;
+    }
+    nav{
+        display: none;
+        padding: 1rem 2rem;
+    }
+    .mobile-navbar .logo img{
+        width: 150px;
+    }
+    .message .left h4{
+        font-size: 16px;
+        width: fit-content;
+    }
+}
+@media (max-width:800px){
+    .contactBox form{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 1rem;
+        position: relative;
+        padding-bottom: 14rem;
+    }
+    .hero h1{
+        padding: 10rem 0 0 1.8rem;
+        color: rgb(246, 240, 240);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .hero p{
+        width: 55%;
+        margin: left;
+        line-height: 22px;
+        font-size: 14px;
+        color: #bfc2c4;
+        font-family: "Inter", Sans-serif;
+        margin-top: 2rem;
+        padding-left: 1.8rem;
+    }
+    .message{
+        flex-direction: column;
+    }
+    .message .left,.message .right{
+        width: 100%;
+    }
+    .message .left{
+        padding: 2rem 0;
+    }
+    .message .left h4{
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    .mmsgBox .right{
+        padding-bottom: 2rem;
+    }
+
+    footer .inside{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        padding: 3rem 0 8rem 0;
+        flex-direction: column;
+        position: relative;
+    }
+    footer .inside .link{
+        position: absolute;
+        bottom: 30px;
+    }
+    footer .first{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    footer .same{
+        width: 100%;
+    }
+    footer .same h3{
+        color: #FFFFFF;
+        font-size: 16px;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .message .right{
+        width: 100%;
+    }
+}
+@media (max-width:535px){
+    .menu-icon{
+        cursor: pointer;
+        border-radius: 2px;
+        display: flex;
+        padding: 4px;
+        align-items: center;
+        background-color: white;
+    }
+    .menu-icon img{
+        width: 22px;
+    }
+    .mmsgBox .right{
+        padding-bottom: 2rem;
+    }
+    .message .right .form input{
+        width: 100%;
+        border: none;
+        outline: none;
+    }
+    footer .inside{
+        display: flex;
+        width: 92%;
+        margin: auto;
+        padding: 3rem 0 8rem 0;
+        flex-direction: column;
+        position: relative;
+    }
+    footer .inside .link{
+        position: absolute;
+        bottom: 30px;
+    }
+    footer .first{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    footer .same{
+        width: 100%;
+    }
+    footer .same h3{
+        color: #FFFFFF;
+        font-size: 16px;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
